@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<canvas id="myCanvas" width="1000" height="900" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas")
+var ctx = c.getContext("2d");
+
+ctx.beginPath();
+ctx.rect(0, 0, 1000, 900);
+ctx.fillStyle = "#1ac600";
+ctx.fill();
+
+function loadDoc(url) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     return this.responseText;
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+var jsonData = '{"r1a1ObjectWidth": "40", "r1a1ObjectHeight": "40", "r1a1ObjectColor": "blue"}';
+var gameData = JSON.parse(jsonData);
+
+function drawObject(left, top, size1, size2, fillcolour) {
+ctx.beginPath();
+ctx.rect(left, top, size1, size2);
+ctx.fillStyle = fillcolour;
+ctx.fill();
+}
+//Row 1
+//Area 1
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 2
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 3
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 4
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 5
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 6
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 7
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 8
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 9
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 10
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Row 2
+//Area 1
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 2
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 3
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 4
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 5
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 6
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 7
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 8
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 9
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 10
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Row 3
+//Area 1
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 2
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 3
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 4
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 5
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 6
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 7
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 8
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 9
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 10
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Row 4
+//Area 1
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 2
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 3
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 4
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 5
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 6
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 7
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 8
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 9
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 10
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Row 5
+//Area 1
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 2
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 3
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 4
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 5
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 6
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 7
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 8
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 9
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 10
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Row 6
+//Area 1
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 2
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 3
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 4
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 5
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 6
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 7
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 8
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 9
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 10
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Row 7
+//Area 1
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 2
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 3
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 4
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 5
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 6
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 7
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 8
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 9
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 10
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Row 8
+//Area 1
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 2
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 3
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 4
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 5
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 6
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 7
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 8
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 9
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 10
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Row 9
+//Area 1
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 2
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 3
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 4
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 5
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 6
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 7
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 8
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 9
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 10
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Row 10
+//Area 1
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 2
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 3
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 4
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 5
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 6
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 7
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 8
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 9
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+//Area 10
+document.getElementById("myCanvas").innerHTML = drawObject(0, 10, gameData.r1a1ObjectWidth, gameData.r1a1ObjectHeight, gameData.r1a1ObjectColor);
+</script>
+</center>
+</body>
+</html>
