@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html>
-<body>
-<center>
-<canvas id="myCanvas" width="1000" height="1000" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.</canvas>
+  <body>
+    <center>
+      <canvas id="myCanvas" width="1000" height="1000" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+      </canvas>
+    </center>
 
-<script>
-var c = document.getElementById("myCanvas")
-var ctx = c.getContext("2d");
+    <script>
+      var c = document.getElementById("myCanvas")
+      var ctx = c.getContext("2d");
 
-ctx.beginPath();
-ctx.rect(0, 0, 1000, 1000);
-ctx.fillStyle = "#1ac600";
-ctx.fill();
+      ctx.beginPath();
+      ctx.rect(0, 0, 1000, 1000);
+      ctx.fillStyle = "#1ac600";
+      ctx.fill();
 
-function loadDoc(url) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-     return this.responseText;
-    }
-  };
-  xhttp.open("GET", url, true);
-  xhttp.send();
-}
-var jsonData = '{"Object1": {"Width": "40","Height": "40", "Color": "blue", "Left": "0", "Top": "0"}, "Object2": {"Width": "40", "Height": "40", "Color": "red", "Left": "100", "Top": "100"}}';
-var gameData = JSON.parse(jsonData);
+      function loadDoc(url) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+          return this.responseText;
+          }
+        };
+        xhttp.open("GET", url, true);
+        xhttp.send();
+      }
+      var jsonData = '{"Object1": {"Width": "40","Height": "40", "Color": "blue", "Left": "0", "Top": "0"}, "Object2": {"Width": "40", "Height": "40", "Color": "red", "Left": "100", "Top": "100"}}';
 
-function drawObject(left, top, size1, size2, fillcolour) {
-ctx.beginPath();
-ctx.rect(left, top, size1, size2);
-ctx.fillStyle = fillcolour;
-ctx.fill();
-}
+      function drawObject(left, top, size1, size2, fillcolour) {
+        ctx.beginPath();
+        ctx.rect(left, top, size1, size2);
+        ctx.fillStyle = fillcolour;
+        ctx.fill();
+      }
 
-for(var objectData in gameData) {
-document.getElementById("myCanvas").innerHTML = drawObject(objectData.Left, objectData.Top, objectData.Width, objectData.Height, objectData.Color);
-}
-</script>
-</center>
-</body>
+      var gameData = JSON.parse(jsonData, (key, objectData) => {
+        // key = Object1, etc.
+        document.getElementById("myCanvas").innerHTML = drawObject(objectData.Left, objectData.Top, objectData.Width, objectData.Height, objectData.Color);
+        return objectData;     // return the unchanged property value.
+      });
+    </script>
+  </body>
 </html>
