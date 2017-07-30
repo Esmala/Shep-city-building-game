@@ -7,9 +7,10 @@
       </canvas>
     </center>
 
-    <script src="/functions.js"></script>
+    <!-- Include functions -->
+    <script src="functions.js"></script>
   
-    
+    <!-- The Game -->
     <script>
       var c = document.getElementById("myCanvas")
       var ctx = c.getContext("2d");
@@ -19,24 +20,7 @@
       ctx.fillStyle = "#1ac600";
       ctx.fill();
 
-      // Function to draw object
-      function drawObject(left, top, size1, size2, fillcolour) {
-        ctx.beginPath();
-        ctx.rect(left, top, size1, size2);
-        ctx.fillStyle = fillcolour;
-        ctx.fill();
-      }
-
-      // Function to update view
-      function updateView(jsonData) {
-        var gameData = JSON.parse(jsonData, (key, objectData) => {
-          // key = Object1, etc.
-          document.getElementById("myCanvas").innerHTML = drawObject(objectData.Left, objectData.Top, objectData.Width, objectData.Height, objectData.Color);
-          return objectData;     // return the unchanged property value.
-        });
-      }
-
-      updateWithJson("/example.json");
+      updateWithJson(ctx, "example.json");
     </script>
   </body>
 </html>
