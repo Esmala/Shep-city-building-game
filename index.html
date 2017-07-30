@@ -12,6 +12,7 @@
   
     <!-- The Game -->
     <script>
+      (function(){
       var c = document.getElementById("myCanvas")
       var ctx = c.getContext("2d");
 
@@ -21,6 +22,8 @@
       ctx.fill();
 
       updateWithJson(ctx, "example.json");
+      setTimeout(arguments.callee, 5000);
+      })();
     </script>
   </body>
 </html>
