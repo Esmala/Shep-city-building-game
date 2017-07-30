@@ -1,0 +1,5 @@
+:12345 {
+    gzip
+
+    fastcgi /api /run/php/php7.1-fpm.sock php
+}
