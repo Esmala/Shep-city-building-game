@@ -10,7 +10,7 @@ function drawObject(ctx, left, top, size1, size2, fillcolour) {
 function updateView(ctx, jsonData) {
   var gameData = JSON.parse(jsonData, (key, objectData) => {
     // key = Object1, etc.
-    document.getElementById("myCanvas").innerHTML = drawObject(ctx, objectData.Left, objectData.Top, objectData.Width, objectData.Height, objectData.Color);
+    document.getElementById("myCanvas").innerHTML = drawObject(ctx, objectData.left, objectData.top, objectData.width, objectData.height, objectData.objectcolor);
     return objectData;     // return the unchanged property value.
   });
 }
