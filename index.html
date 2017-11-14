@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
   <body>
+   <script>
+    (function(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML = "Cash:" + myObj.cash + " Population:" + myObj.population;
+    }
+    };
+    xmlhttp.open("GET", "gamestats-api.php", true);
+    xmlhttp.send();
+    setTimeout(arguments.callee, 5000);
+    })();
+    </script>
     <center>
+     <h3 id="demo"></h3>
       <canvas id="myCanvas" width="1000" height="1000" style="border:1px solid #d3d3d3;">
         Your browser does not support the HTML5 canvas tag.
       </canvas>
+
     </center>
 
     <!-- Include functions -->
@@ -21,7 +37,7 @@
       ctx.fillStyle = "#1ac600";
       ctx.fill();
 
-      updateWithJson(ctx, "api.php");
+      updateWithJson(ctx, "graphics-api.php");
       setTimeout(arguments.callee, 5000);
       })();
     </script>
